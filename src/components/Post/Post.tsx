@@ -1,3 +1,5 @@
+import Avatar from "../Avatar";
+import Comment from "../Comment/Comment";
 import styles from "./Post.module.css"
 
 interface PostProps {
@@ -10,10 +12,7 @@ export default function Post(props: PostProps) {
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img 
-                        className={styles.avatar}
-                        src="https://github.com/RamboGj.png"
-                    />
+                    <Avatar src="https://github.com/RamboGj.png" />
                     <div className={styles.authorInfo}>
                         <strong>
                             João Rambo
@@ -52,6 +51,26 @@ export default function Post(props: PostProps) {
                     <a href="/">#nlw  </a>{' '}
                     <a href="/">#rocketseat</a>
                 </p>
+            </div>
+
+            <form className={styles.commentForm}>
+                <strong>Deixe seu feedback</strong>
+
+                <textarea 
+                    placeholder="Deixe um comentário"
+                />
+
+                <footer>
+                    <button type="submit">  
+                        Publicar
+                    </button>
+                </footer>
+            </form>
+
+            <div className={styles.commentList}>
+                <Comment />
+                <Comment />
+                <Comment />
             </div>
         </article>
        
