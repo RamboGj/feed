@@ -2,5 +2,5 @@
 
 It looks like a CRUD, with create and delete options.
 
-## ReactJS
-## Typescript
+## ReactJS, Typescript
+
